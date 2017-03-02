@@ -30,22 +30,19 @@
 </style>
 
 <body>
-<h1>Utilisateurs</h1>
+<h1>Activités</h1>
+<p>
 <table>
-    <th>Nom</th>
-    <th>Prénom</th>
-    <th>Email</th>
-    <th>Sexe</th>
-    <th>Date de naissance</th>
 
-    <tr th:each="utilisateur : ${utilisateurs}">
-        <td th:text="${utilisateur.nom}">Nom</td>
-        <td th:text="${utilisateur.prenom}">Prenom ...</td>
-        <td th:text="${utilisateur.mail}">Mail ...</td>
-        <td th:text="${utilisateur.sexe}">sexe</td>
-        <td th:text="${utilisateur.date}">date</td>
+    <th>Titre</th>
+    <th>Descriptif</th>
+
+    <tr th:each="activite : ${activites}">
+        <td th:text="${activite.titre}">titre</td>
+        <td th:text="${activite.descriptif}">descriptif</td>
     </tr>
 </table>
+</p>
 </body>
 
 </html>

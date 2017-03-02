@@ -4,7 +4,7 @@ import friendsofmine.domain.Activite;
 import friendsofmine.domain.Utilisateur;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import service.InitialisationService;
+import friendsofmine.service.InitialisationService;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
@@ -14,12 +14,8 @@ import java.util.List;
  */
 @Component
 public class Bootstrap {
-    InitialisationService initialisationService;
-
     @Autowired
-    public Bootstrap(InitialisationService initialisationService) {
-        this.initialisationService = initialisationService;
-    }
+    private InitialisationService initialisationService;
 
     @PostConstruct
     void init() {
